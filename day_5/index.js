@@ -5,8 +5,8 @@ const showProducts = async () => {
     const res = await fetch("https://dummyjson.com/products");
     const data = await res.json();
     products = data.products;
-   
-    products.map((product)=>{
+
+    products.map((product) => {
         const div = document.createElement("div");
 
         const img = document.createElement("img");
@@ -36,6 +36,17 @@ const showProducts = async () => {
         div.appendChild(incrementBtn);
 
         prodContainer.appendChild(div);
+        let counter = 0;
+        incrementBtn.addEventListener("click", () => {
+            counter++;
+            span.innerText = counter;
+        })
+        decrementBtn.addEventListener("click", () => {
+            if (counter > 0) {
+                counter--;
+                span.innerText = counter;
+            }
+        })
     })
 }
 showProducts();
