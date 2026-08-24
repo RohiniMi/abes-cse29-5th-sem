@@ -40,6 +40,11 @@ const showProducts = async () => {
         incrementBtn.addEventListener("click", () => {
             counter++;
             span.innerText = counter;
+            localStorage.setItem("product",product);
+            localStorage.setItem("id",product.id);
+            localStorage.setItem("image",product.thumbnail);
+            localStorage.setItem("title",product.title);
+            localStorage.setItem("price",product.price);
         })
         decrementBtn.addEventListener("click", () => {
             if (counter > 0) {
