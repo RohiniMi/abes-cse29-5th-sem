@@ -11,6 +11,7 @@ const Header = () => {
                 <button onClick={() => navigate("/")}>Home</button>
                 <button onClick={() => navigate("/about")}>About</button>
                 <button onClick={() => navigate("/contact")}>Contact</button>
+                <button onClick={() => navigate("/product")}>Product</button>
             </nav>
         </div>
     )
